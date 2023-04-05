@@ -1,0 +1,203 @@
+<!doctype html>
+<!--
+=============
+Project Name: COVID-19 Survey 
+Project Description: Solution for Programming Assignment 5
+Date: 2022/10/30
+Author: Minyi Li
+=============
+-->
+
+<html>
+	<head>    
+
+	 	<!-- Webpage title -->
+	 	<title> COVID-19 Survey BY ml3754 </title>
+
+	 	<!-- link to a External CSS file -->
+	 	<link rel="stylesheet" type="text/css" href="A8_form.css">
+
+
+
+	 	<!-- script tag for e External Javascript file  -->
+         
+        <script src="A8_script.js"></script>
+		
+
+ 	</head>
+
+
+
+	<body>
+		<!-- Heading level 1 -->
+		<h1>COVID-19 Survey</h1>
+
+		
+		<!-- form with name attribute COVID-19 Survey -->
+        <form name="Survey" onsubmit="return check()" novalidate>
+
+            <!-- #3a : section 1 - User Information -->
+            <div>
+                <h2> Personal Information </h2>
+                <p> This section is for your Personal information. Please read and answer each question carefully to the best of your ability. </p> 
+ 
+                <!-- get user’s input of First Name, Last Name, Email, and Phone. -->
+
+                <!-- Required * First Name -->
+                First Name <span id = "s1" >*</span> : &nbsp;  
+                <input type="text" name="fName" id="fName" size="20" required minlength="1" maxlength="28"/>    
+
+                <div id="e1" class="emsg"></div>
+
+
+                <!-- Required * Last Name -->
+                Last Name <span id = "s2" >*</span> : &nbsp;  
+                <input type="text" name="lName" id="lName" size="20" required minlength="1" maxlength="28"/>    
+
+                <div id="e2" class="emsg"></div>
+         
+ 
+                <!-- Required * Email -->
+                Email <span id = "s3" >*</span> : &nbsp;  &nbsp; 
+                <input type="text" name="email" id="email" size="50" required minlength="1" maxlength="58"/>    
+
+                <div id="e3" class="emsg"></div>
+
+                <!-- Phone -->
+                Phone &nbsp;    : &nbsp;
+                <input type="text" name="phone" id="phone" size="50" required length="13" />   
+
+                <div id="e8" class="emsg"></div>
+
+
+            </div>
+
+
+            <!-- section 2 - Vaccine History -->       
+            <div>                
+                <h2> Vaccine History</h2>
+
+                <p>This section is for your history of receiving previous doses of the COVID-19 Vaccine from any provider. <br>
+				If you didn't receive any COVID-19 Vaccine dose before, select No in the below question and skip to the next section.</p>
+	
+				
+                <!-- make two radio selections “Yes” or “No” to collect required user’s answer of being vaccinated. -->
+
+                <div> 
+
+                    <div><strong>Have you ever received a dose of COVID-19 vaccine? <span id = "s4" >*</span> </strong></div>
+
+                    <div id="e4" class="emsg"></div>
+                    
+                    <br>
+
+                    <input type="radio" id="ry1" name="r1" value="Yes" onclick="hideProduct()" required> Yes
+                    
+                    <input type="radio" id="ry2" name="r1" value="No" onclick="hideProduct()"> No 
+                    
+                </div>
+
+                <!-- make checkbox selections to let user select all brands of received vaccines if the user has been vaccinated before. -->
+
+                <br>
+
+                <div id="vaccineProduct" >
+
+                    <div><strong>If yes, Which vaccine product did you receive? </strong> </div>
+                    <div id="e5" class="emsg"></div>
+
+                    <br>
+
+                	<input type="checkbox" id="cb1" name="c1" value="Pfizer"> Pfizer <br>
+					<input type="checkbox" id="cb2" name="c1" value="Moderna"> Moderna <br>
+					<input type="checkbox" id="cb3"name="c1" value="Johnson and Johnson"> Johnson and Johnson <br>
+					<input type="checkbox" id="cb4"name="c1" value="Other"> Other
+                
+                </div>
+
+            </div>
+
+
+            <!-- section 3 - Medical Condition -->
+            <div>
+                <h2> Medical Condition </h2>  
+       
+				<p>Please read each question carefully and fill out each section to the best of your knowledge</p>
+				
+
+                <div id = "checkSick"> 	
+
+    				<div><strong>Are you feeling sick today? <span id = "s6" >*</span> </strong></div>
+
+                    <div id="e6" class="emsg"></div>
+
+                    <br>
+                        
+                    <!-- make two radio selections to ask for required sick feeling of user. -->
+	            
+                    <input type="radio" id="ry3" name="r2" value="Yes" required> Yes
+                    <input type="radio" id="ry4" name="r2" value="No" required>  No 
+                    
+                </div>
+
+				<p><strong>In the past 24 hours, have you experienced a new onset of any of the following symptoms? Check all that apply. </strong> </p>
+
+				<!-- make checkbox selections to collect user experienced symptoms-->
+				<div>
+                	<input type="checkbox" name="c2" value="Fever"> Fever 
+					<input type="checkbox" name="c2" value="Chills"> Chills 
+					<input type="checkbox" name="c2" value="Fatigue"> Fatigue 
+					<input type="checkbox" name="c2" value="Muscle or body aches"> Muscle or body aches
+					<input type="checkbox" name="c2" value="Headache"> Headache 
+					<input type="checkbox" name="c2" value="Sore throat"> Sore throat  
+					<input type="checkbox" name="c2" value="Congestion or runny nose"> Congestion or runny nose 
+					<input type="checkbox" name="c2" value="Nausea or vomiting">Nausea or vomiting
+					<input type="checkbox" name="c2" value="Diarrhea"> Diarrhea 
+					<input type="checkbox" name="c2" value="Cough"> Cough 
+					<input type="checkbox" name="c2" value="Fatigue"> Fatigue 
+					<input type="checkbox" name="c2" value="Shortness of breath or difficulty breathing"> Shortness of breath or difficulty breathing 
+					<input type="checkbox" name="c2" value="Loss of taste or smell"> Loss of taste or smell                 
+                </div>
+                
+                <br>
+
+                <!-- make three radio selections to ask for required close contact status.-->
+                
+                <div>
+
+                    <div><strong>In the last 2 weeks, did you care for or have <a href="https://www.cdc.gov/coronavirus/2019-ncov/php/contact-tracing/contact-tracing-plan/appendix.html#contact">close contact</a> with someone diagnosed with COVID-19? <span id = "s7" >*</span> </strong> </div>
+                    
+                    <div id="e7" class="emsg"></div>
+
+                    <br>
+                
+                    <input type="radio" id="ry5" name="r3" value="Yes" required> Yes 
+                    <input type="radio" id="ry6" name="r3" value="No" required>  No 
+                    <input type="radio" id="ry7" name="r3" value="Not sure" required>  Not sure
+                    
+                </div>
+
+			</div>
+
+            <br>
+
+
+            <hr>
+
+            <!-- a reset button and a submit button using input elements  -->
+
+            <input type="reset" value="Reset Survey"> <br>  
+        
+
+            <div id="button">
+
+                <input type="image" src="https://cdn-icons-png.flaticon.com/512/5627/5627028.png" alt="Submit" width="70" height="70" onclick="checkSurvey(), check ()"> 
+
+            </div>
+
+        </form>
+
+
+	</body>
+
+</html>

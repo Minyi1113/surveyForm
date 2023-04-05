@@ -1,0 +1,67 @@
+/*
+=============
+Project Name: COVID-19 Survey External CSS file 
+Project Description: Solution for Programming Assignment 5
+Date: 2022/10/30
+Author: Minyi Li
+=============
+*/
+
+/* choice of the color Purple as a background color to the whole webpage, 
+	the color of white as the color to the body characters */
+
+body{
+	background-color: #E3DDFE;
+	color: black;
+}
+
+/* Change the font size to 150 and the font color to white of the heading element*/
+h1 {
+	font: 150;
+	text-align: center;
+}
+
+
+/* unvisited link is red*/
+a:link {
+	color: red;
+}
+
+/* visited link is red*/
+a:visited {
+	color: black;
+}
+
+/* mouse over link is blue*/
+a:hover {
+	color: blue;
+}
+
+#button {
+    text-align: center;
+}
+
+.required-indicator {
+    color: red;
+    vertical-align: super;
+}
+
+.required-indicator-black {
+    color: black;
+    vertical-align: super;
+}
+
+
+.err { 
+	background: #ffe6ee; 
+	border: 1px solid #b1395f; 
+}
+ 
+.emsg { 
+	color: #c12020; 
+	font-weight: bold; 
+}
+       
+
+
+
