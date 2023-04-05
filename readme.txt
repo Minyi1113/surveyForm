@@ -15,4 +15,5 @@ If the user changed the answer later by selecting “No” to the question “Ha
 6. The “Name” shown on the “Confirmation page” should be a full name, concatenated by Capitalized first name and Capitalized last name.
 
 https://user-images.githubusercontent.com/56332687/230003646-1a51ae3c-95eb-42f7-b2c4-3ebf1ca44e3b.png
-![c43f8fca78fe817ec982ee8482f9261](https://user-images.githubusercontent.com/56332687/230004307-49e23f57-df0e-4e77-bd01-81106bace997.png)
+https://user-images.githubusercontent.com/56332687/230004307-49e23f57-df0e-4e77-bd01-81106bace997.png
+https://user-images.githubusercontent.com/56332687/230004405-5bfe4867-3fa4-4d9b-8bb2-27157376e69d.png
