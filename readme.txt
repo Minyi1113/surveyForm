@@ -14,4 +14,4 @@ If the user changed the answer later by selecting “No” to the question “Ha
 
 6. The “Name” shown on the “Confirmation page” should be a full name, concatenated by Capitalized first name and Capitalized last name.
 
-https://github.com/Minyi1113/surveyForm/issues/1#issue-1655038440
+https://user-images.githubusercontent.com/56332687/230002726-7c5539a3-9a88-4112-b475-7e5b02c9425d.png
